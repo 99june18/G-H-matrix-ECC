@@ -13,6 +13,8 @@ unsigned int H_Matrix_SEC_Unbound[OECC_REDUN_LEN][OECC_CW_LEN];
 
 void generator_oecc_H_matrix() {
     FILE *fp = fopen("H_matrix_SEC_Unbound.txt", "r");
+    // For other H matrix.
+    // FILE *fp = fopen("H_matrix_136x128_SEC.txt", "r");  
     if (!fp) { perror("fopen"); exit(EXIT_FAILURE); }
 
     for (int r = 0; r < OECC_REDUN_LEN; ++r)
