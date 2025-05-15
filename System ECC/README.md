@@ -6,6 +6,7 @@ Correct all of single, double, symbol error.
 # build_SSC_DEC.py
 
 Goal : Build an SSC-DEC H matrix for RS(18,16) over GF(2^16).
+
 <코드 동작>
 1. GF(16)의 2048개 primitive polynomial 중 하나를 선택
 2. 선택한 primitive polynomial을 사용해 H matrix의 후보 column 2^16-1개를 생성
