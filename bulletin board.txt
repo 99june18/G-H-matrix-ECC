@@ -1,5 +1,13 @@
 2025-05-14
+-김승현-
 1. Unity ECC paper의 알고리즘을 기반으로 코드를 만들어서(원래 matrix 크기만 바꿔서 코드를 그대로 사용하려다가 실행이 잘 안 돼서 새로 만듦) 테스트 중
 2. 코드 동작은 GF(2^16)의 primitive poly 2048개 중 하나씩 넣어서 primitive poly 기반으로 H matrix의 후보 열 2^16-1개를 만들어내고, 
    열을 하나씩 모아 가며 SSC-DEC 조건을 만족하는 열 18개(symbol 단위, H = 2*18 matrix)가 모이면 코드 종료, 없으면 다음 primitivep oly 사용
    이러한 구조이며, 실행 중인데 검사 끝나려면 한참 걸릴 거 같아서 코드 실행 완료되면 업로드할 예정
+
+2025-05-15
+-김준환-
+1. (136,128) on-die ECC fault_sim code 제작
+2. 이를 바탕으로 unbounded (288,272) on-die ECC에 해당되는 H matrix와 fault sim 코딩할 예정
+3. 마지막으로 Bounded fault을 적용한 H matrix와 fault sim 코딩. 
+# 문제점 : bounded fault에 대한 H matrix 제작 방식에 대한 코드는 없어서 유추해서 만들어야 한다.

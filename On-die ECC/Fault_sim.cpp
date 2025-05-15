@@ -97,6 +97,7 @@ int main() {
         /* ---- 오류 주입: 두 비트를 반드시 다르게 ---- */
         int p1 = rand() % OECC_CW_LEN;
         Chip_array[fault_chip][p1] ^= 1;
+        
         /* ---- double bit error inject ---- */
         // int p2;
         // do { p2 = rand() % OECC_CW_LEN; } while (p2 == p1);
