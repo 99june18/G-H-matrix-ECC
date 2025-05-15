@@ -14,11 +14,3 @@ Goal : Build an SSC-DEC H matrix for RS(18,16) over GF(2^16).
    3-1. 성공 시 column의 조합 = 2 x 18 symbol 단위 matrix를 반환하고, binary로 변환한 32 x 288 bit matrix까지 반환한 후 탐색 종료
    3-2. 실패 시 fail 메시지를 띄우고 다음 primitive polynomial로 탐색 반복
 
-
-Input  : GF_2^16__primitive_polynomial.txt
-
-Outputs on success:
-
-  H_indices.txt        chosen 18 column numbers
-  H_symbol.txt         2 x 18 matrix, 16-bit hex values
-  H_binary_32x288.txt  32 x 288 matrix, binary 0/1
