@@ -18,6 +18,7 @@ Goal : Build an SSC-DEC H matrix for RS(18,16) over GF(2^16).
 Input  : GF_2^16__primitive_polynomial.txt
 
 Outputs on success:
+
   H_indices.txt        chosen 18 column numbers
   H_symbol.txt         2 x 18 matrix, 16-bit hex values
-  H_binary_32x288.txt  32 x 288 matrix, ASCII 0/1
+  H_binary_32x288.txt  32 x 288 matrix, binary 0/1
