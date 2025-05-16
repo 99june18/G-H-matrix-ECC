@@ -4,7 +4,7 @@
 #include <cstring>
 
 #define RUN_NUM        1000
-#define CHIP_NUM       10
+#define CHIP_NUM       1
 #define OECC_CW_LEN    136
 #define OECC_REDUN_LEN 8
 
@@ -12,9 +12,12 @@
 unsigned int H_Matrix_SEC_Unbound[OECC_REDUN_LEN][OECC_CW_LEN];
 
 void generator_oecc_H_matrix() {
-    FILE *fp = fopen("H_matrix_SEC_Unbound.txt", "r");
+    // Compare with this two H matrix. (첫번째가 SDC rate가 두번째에 비해 더 낮다.)
+    // H_matrix_SEC_Unbound is better than H_matrix_136x128_SEC.
+    // 어떤 H matrix을 사용하느냐에 따라 성능지표가 달라진다. (좋은 H matrix을 찾는게 중요함.)
+    FILE *fp = fopen("H_matrix_SEC_Unbound.txt", "r");             
     // For other H matrix.
-    // FILE *fp = fopen("H_matrix_136x128_SEC.txt", "r");  
+    //FILE *fp = fopen("H_matrix_136x128_SEC.txt", "r");  
     if (!fp) { perror("fopen"); exit(EXIT_FAILURE); }
 
     for (int r = 0; r < OECC_REDUN_LEN; ++r)
@@ -101,9 +104,9 @@ int main() {
         Chip_array[fault_chip][p1] ^= 1;
         
         /* ---- double bit error inject ---- */
-        // int p2;
-        // do { p2 = rand() % OECC_CW_LEN; } while (p2 == p1);
-        // Chip_array[fault_chip][p2] ^= 1;
+        //int p2;
+        //do { p2 = rand() % OECC_CW_LEN; } while (p2 == p1);
+        //Chip_array[fault_chip][p2] ^= 1;
 
         printf("run %3d | Before codeword = ", run);
         print_codeword(Chip_array[fault_chip]);
@@ -126,7 +129,7 @@ int main() {
             printf("==> SDC (silent miscorrection)\n\n");
         } else {                      /* 신드롬 비0  → UE */
             ++cnt_UE;
-            printf("==> UE  (uncorrectable)\n\n");
+            printf("==> DUE  (Detect but uncorrectable)\n\n");
         }
     }
 
@@ -134,10 +137,10 @@ int main() {
     printf("=================================================\n");
     printf("Runs : %d\n", RUN_NUM);
     printf("CE   : %d\n", cnt_CE);
+    printf("DUE   : %d\n", cnt_UE);
     printf("SDC  : %d\n", cnt_SDC);
-    printf("UE   : %d\n", cnt_UE);
     printf("CE ratio  = %.2f%%\n",  100.0 * cnt_CE  / RUN_NUM);
+    printf("DUE ratio  = %.2f%%\n",  100.0 * cnt_UE  / RUN_NUM);
     printf("SDC ratio = %.2f%%\n",  100.0 * cnt_SDC / RUN_NUM);
-    printf("UE ratio  = %.2f%%\n",  100.0 * cnt_UE  / RUN_NUM);
     return 0;
 }
