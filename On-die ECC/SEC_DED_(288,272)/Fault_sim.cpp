@@ -15,8 +15,8 @@
 unsigned int H_Matrix[OECC_REDUN_LEN][OECC_CW_LEN];
 void load_H() {
     //FILE *fp = fopen("H_matrix_SEC_16bound.txt", "r");
-    FILE *fp = fopen("H_matrix_SEC_16bound1.txt", "r");
-    //FILE *fp = fopen("H_matrix_SEC_16bound2.txt", "r");
+    // FILE *fp = fopen("H_matrix_SEC_16bound1.txt", "r");
+    FILE *fp = fopen("H_matrix_SEC_16bound2.txt", "r");
     if (!fp) { perror("fopen"); exit(EXIT_FAILURE); }
     for (int r = 0; r < OECC_REDUN_LEN; ++r)
         for (int c = 0; c < OECC_CW_LEN; ++c)
