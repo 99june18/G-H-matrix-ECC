@@ -13,5 +13,6 @@
    (single bie CE 100%, double bit DUE 100%, triple bit DUE = 86%) For 100000 loop.
 -------------------------------------------------------------------
 3. Bounded fault을 적용한 H matrix 및 fault_sim 만들기 (오후 작업)
-    > 완료
-    > 다양한 H matrix 만들기.
+    > 문제 상황이였던 Identity matrix에 miscorrection 해결
+    > 최종적으로 16b bounded 한 SEC-DED 지원 H matrix 완성.
+    > 이후 목표 : 다양한 H matrix 만들기 + Fault_sim의 다양한 bit error 추가하기.
