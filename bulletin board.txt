@@ -19,6 +19,7 @@
 -김준환-
 1. 연장선으로 (136,128) SEC의 fualt_sim 제작 (완료)
 2. 우리의 on-die ECC (288,272) SEC의 H matrix 및 fault_sim 제작 (완료)
-   > 해당 H matrix는 double bit error의 detection이 좋다.
+   > 해당 H matrix는 double bit error의 detection이 좋다. 
+   (single bie CE 100%, double bit DUE 100%, triple bit DUE = 86%) For 100000 loop.
 -------------------------------------------------------------------
 3. Bounded fault을 적용한 H matrix 및 fault_sim 만들기 (오후 작업)

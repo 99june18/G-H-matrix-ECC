@@ -3,7 +3,7 @@
 #include <ctime>
 #include <cstring>
 
-#define RUN_NUM        1000
+#define RUN_NUM        100000
 #define CHIP_NUM       1
 #define OECC_CW_LEN    288
 #define OECC_REDUN_LEN 16
