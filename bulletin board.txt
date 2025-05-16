@@ -23,3 +23,8 @@
    (single bie CE 100%, double bit DUE 100%, triple bit DUE = 86%) For 100000 loop.
 -------------------------------------------------------------------
 3. Bounded fault을 적용한 H matrix 및 fault_sim 만들기 (오후 작업)
+
+-김승현-
+1. H matrix 32*288 matrix 정상 출력 안 되는 오류 수정 + 반복 실행 시 H matrix가 이어서 txt 파일에 쓰이도록 변경 (완료)
+2. 코드 실행 결과로 나온 H matrix 검증을 위해 fault sim 코드 제작 (SBE, DBE, TBE, SSE, DSE)
+3. fault sim이 완료되면, 각 H matrix에 대한 data와 matrix를 축적
