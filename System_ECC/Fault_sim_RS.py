@@ -149,3 +149,7 @@ if __name__ == "__main__":
         due = res[p]["DUE"] / tot
         sdc = res[p]["SDC"] / tot
         print(f" {p:7s}| {ce:9.6f} | {due:9.6f} | {sdc:9.6f}")
+
+
+# 실행 python Fault_sim_RS.py --trials 100000
+# git pull test
