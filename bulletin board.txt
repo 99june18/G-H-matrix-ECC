@@ -11,3 +11,11 @@
 2. 이를 바탕으로 unbounded (288,272) on-die ECC에 해당되는 H matrix와 fault sim 코딩할 예정
 3. 마지막으로 Bounded fault을 적용한 H matrix와 fault sim 코딩. 
 # 문제점 : bounded fault에 대한 H matrix 제작 방식에 대한 코드는 없어서 유추해서 만들어야 한다.
+
+2025-05-16
+-김준환-
+1. 연장선으로 (136,128) SEC의 fualt_sim 제작 (완료)
+2. 우리의 on-die ECC (288,272) SEC의 H matrix 및 fault_sim 제작 (완료)
+   > 해당 H matrix는 double bit error의 detection이 좋다.
+-------------------------------------------------------------------
+3. Bounded fault을 적용한 H matrix 및 fault_sim 만들기 (오후 작업)
