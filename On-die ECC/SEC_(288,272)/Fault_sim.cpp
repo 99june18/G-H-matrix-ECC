@@ -99,9 +99,14 @@ int main() {
         Chip_array[fault_chip][p1] ^= 1;
         
         /* ---- double bit error inject ---- */
-        int p2;
-        do { p2 = rand() % OECC_CW_LEN; } while (p2 == p1);
-        Chip_array[fault_chip][p2] ^= 1;
+        //int p2;
+        //do { p2 = rand() % OECC_CW_LEN; } while (p2 == p1);
+        //Chip_array[fault_chip][p2] ^= 1;
+
+        /* ---- triple bit error inject ---- */
+        //int p3;
+        //do { p3 = rand() % OECC_CW_LEN; } while (p3 == p2 == p1);
+        //Chip_array[fault_chip][p3] ^= 1;
 
         printf("run %3d | Before codeword = ", run);
         print_codeword(Chip_array[fault_chip]);
