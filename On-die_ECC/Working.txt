@@ -16,3 +16,8 @@
     > 문제 상황이였던 Identity matrix에 miscorrection 해결
     > 최종적으로 16b bounded 한 SEC-DED 지원 H matrix 완성.
     > 이후 목표 : 다양한 H matrix 만들기 + Fault_sim의 다양한 bit error 추가하기.
+
+2025-05-17
+1. 목표로 했던 다양한 H matrix에서 가장 좋은 성능인 것 선정하였다.
+2. error sceniro로 DE+DE도 추가하였으며, random하게 3b error 뿐만 아니라, 진정한 SE+SE+SE, 
+   즉 bound region에서 single bit error만 발생하여, 3 bounded region에서 single bit error씩 발생하는 경우 추가.
